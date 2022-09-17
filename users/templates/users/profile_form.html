@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- Main Section -->
+<div class="edit-account-form">
+    <main class="formPage my-xl ">
+        <div class="content-box form--content">
+            <div class="formWrapper" style="background-color: #FFF5E4; border: 2px solid black">
+
+                <h4 style="text-align: center; color: black;">edit account</h4>
+                
+                <a class="backButton" href="{% url 'account' %}"><i class="im im-angle-left"></i></a>
+                <br>
+
+                <form class="form" method="POST" action="{% url 'edit-account' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <!-- Input:Text -->
+                    {% for field in form %}
+                    <div class="form__field">
+                        <label style="color: black;">{{ field.label }}</label>
+                        <div class="border-input-black">{{ field }}</div>
+                    </div>
+                    {% endfor %}
+                    <!-- SUBMIT BUTTON -->
+                    <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+{% endblock %}

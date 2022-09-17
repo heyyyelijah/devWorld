@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<div style="padding: 10vw;">
+    <center>
+        <div style="width: 400px; border: 1px solid; padding: 20px 15px; border-radius: 5px;">
+            <form method="POST">
+                {% csrf_token %}
+                <p>are you sure you want to delete "{{object}}"?</p>
+            
+                <a href="{{request.GET.next}}" style="color: #256D85; margin-right: 10px;">
+                    Go Back
+                </a>
+                <input type="submit" value="Confirm" class="btn btn--sub my-md">
+            </form>
+        </div>
+    </center>
+</div>
+
+{% endblock %}

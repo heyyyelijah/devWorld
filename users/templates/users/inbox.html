@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+  <!-- Main Section -->
+  <main class="inbox my-xl">
+    <div class="content-box">
+      <h3 class="inbox__title">New Messages(<span>{{ newMessagesLen }}</span>)</h3>
+
+      <!-- DO NOT RENDER UL IF THERE ARE 0 MESSAGES -->
+      {% if userMessages %}
+        <ul class="messages">
+          {% for message in userMessages %}
+            <!-- BOLD TEXT IF UNREAD -->
+            {% if message.is_read == False %}
+              <li class="message message--unread">
+            <!-- NON BOLDED TEXT IF READ ALREADY -->
+            {% else %}
+              <li class="message">
+            {% endif %}
+              <a href="{% url 'message' message.id %}">
+
+                <!-- condition if sender is a registered user -->
+                {% if message.sender %}
+                  <span class="message__author">{{ message.sender }}</span>
+                <!-- if sender is not registered, output name instead -->
+                {% else %} 
+                  <span class="message__author">{{ message.email }}</span>
+                {% endif %}
+
+                <span class="message__subject">{{ message.subject }}</span>
+                <span class="message__date">{{ message.created }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+      <span class="tag tag--outline"> 
+        <small>No Messages...</small> 
+      </span>
+      {% endif %}
+
+    </div>
+  </main>
+
+{% endblock %}
