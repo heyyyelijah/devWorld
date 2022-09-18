@@ -37,7 +37,7 @@ class Profile(models.Model):
     @property
     def imageURL(self):
         try:
-            url = '/static' + self.profile_image.url
+            url = self.profile_image.url
         except:
             url = '/images/profiles/user-default.png'
         return url
