@@ -149,20 +149,14 @@ except:
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-# TELLS DJANGO THAT THE MEDIA IS INSIDE STATIC/IMAGES/
 MEDIA_URL = '/images/'
 
-# TELL THE SYSTEM TO LOOK FOR A FOLDER NAMED 'static' AND USE THAT AS THE DIRECTORY FOR STATICFILES.
 STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, 'static')
-    # newer version of django
     BASE_DIR / 'static'
 ]
 
-#  TELLS DJANGO WHERE TO SAVE UPLOADED MEDIA CONTENTS
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-# DEFINES WHERE OUR STATIC FILES IN PRODUCTION ARE
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/images')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

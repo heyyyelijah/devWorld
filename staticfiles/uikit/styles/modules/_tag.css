@@ -39,8 +39,8 @@
 
 .tag--main,
 .tag--main > small {
-  background: var(--color-main-light);
-  color: var(--color-main);
+  background: var(--color-sub-lighter);
+  color: var(--color-white);
   font-weight: 500;
 }
 
@@ -48,7 +48,7 @@
 .tag--sub > small {
   background: var(--color-sub-lighter);
   color: var(--color-light);
-  font-weight: 500;
+  font-weight: 500; 
 }
 
 .tag--lg {
