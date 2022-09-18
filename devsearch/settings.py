@@ -20,7 +20,7 @@ DEBUG = True
 if os.getcwd() == '/app':
     DEBUG = False
 
-ALLOWED_HOSTS = ['https://devworlddd.herokuapp.com/', 'devworlddd.herokuapp.com', 'www.devworlddd.herokuapp.com']
+ALLOWED_HOSTS = ['https://devworld-elijah.herokuapp.com/', 'devworld-elijah.herokuapp.com', 'www.devworld-elijah.herokuapp.com']
 
 
 # Application definition
