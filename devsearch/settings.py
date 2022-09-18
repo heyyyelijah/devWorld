@@ -162,7 +162,7 @@ STATICFILES_DIRS = [
 #  TELLS DJANGO WHERE TO SAVE UPLOADED MEDIA CONTENTS
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 # DEFINES WHERE OUR STATIC FILES IN PRODUCTION ARE
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/images')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
