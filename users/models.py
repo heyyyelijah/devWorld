@@ -1,5 +1,4 @@
 from django.contrib.auth.models import User
-from distutils.command.upload import upload
 from email.policy import default
 from django.db import models
 import uuid
@@ -38,7 +37,7 @@ class Profile(models.Model):
     @property
     def imageURL(self):
         try:
-            url = self.profile_image.url
+            url = '/static' + self.profile_image.url
         except:
             url = '/images/profiles/user-default.png'
         return url
