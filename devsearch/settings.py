@@ -1,6 +1,5 @@
 from decouple import config
 from pathlib import Path
-from datetime import timedelta
 import os
 
 

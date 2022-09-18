@@ -1,6 +1,3 @@
-from email.policy import default
-from enum import unique
-from msilib.schema import Property
 from django.db import models
 import uuid
 from users.models import Profile
