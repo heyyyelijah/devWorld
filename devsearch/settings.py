@@ -17,10 +17,7 @@ SECRET_KEY = [os.environ.get('SECRET_KEY'), config('SECRET_KEY')]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-if os.getcwd() == '/app':
-    DEBUG = False
-
-ALLOWED_HOSTS = ['https://devworld-elijah.herokuapp.com/', 'devworld-elijah.herokuapp.com', 'www.devworld-elijah.herokuapp.com']
+ALLOWED_HOSTS = [ '127.0.0.1','https://devworld-elijah.herokuapp.com/', 'devworld-elijah.herokuapp.com', 'www.devworld-elijah.herokuapp.com']
 
 
 # Application definition
